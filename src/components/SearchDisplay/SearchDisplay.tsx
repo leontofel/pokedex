@@ -7,7 +7,6 @@ import Card from "../Card/Card";
 import { RandomList, SearchDisplayTitles } from "./stylesSearchDisplay";
 
 export default function Search() {
-    let array: IPokemon[] = [];
 
     const defaultPokemon: IPokemon = {
         id: 0,
@@ -25,14 +24,10 @@ export default function Search() {
             .then(res => {
                 setPokemon(res.data);
             });
-        for (let i = 1; i < 15; i++) {
-            let randomNumber = Math.floor(Math.random() * 170)
-            axios(`https://pokeapi.co/api/v2/pokemon/${randomNumber}/`)
-                .then(res => {
-                    array.push(res.data);
-                });
-        }
-    });
+   
+    }, [])
+
+  
 
     return (
         <>
@@ -51,13 +46,13 @@ export default function Search() {
                 <h2>Dá uma olhada nesses outros pokemons:</h2>
             </SearchDisplayTitles>
             <RandomList>
-                <ul>
+                {/*<ul>
                     {array.map((item: IPokemon) => {
                         return (
                             <li><Card id={item.id} name={item.name} base_experience={item.base_experience} forms={item.forms} location_area_encounters={item.location_area_encounters} /></li>
                         );
                     })}
-                </ul>
+                </ul> */}
 
             </RandomList>
 
