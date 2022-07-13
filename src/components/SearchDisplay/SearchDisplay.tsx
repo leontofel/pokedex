@@ -24,10 +24,10 @@ export default function Search() {
             .then(res => {
                 setPokemon(res.data);
             });
-   
+
     }, [])
 
-  
+
 
     return (
         <>

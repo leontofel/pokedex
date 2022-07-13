@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { backgroundColor, largeSize, mediumSize, tertiaryColor } from "../../styles/variables";
+import { backgroundColor, largeSize } from "../../styles/variables";
 
 const FooterContainer = styled.footer`
     color: white;
@@ -12,8 +12,8 @@ const FooterContainer = styled.footer`
     justify-content: space-between;
     
     img {
-        width: 15vw;
-        height: 25vh;
+        width: 15%;
+        height: 50%;
         margin: 1rem;
     }
     h4 {
@@ -28,6 +28,13 @@ const FooterContainer = styled.footer`
             color: ${backgroundColor};
         }
     }
+    @media only screen and (max-width: 670px){
+        img {
+            width: 35%;
+            height: 50%;
+        }
+    }
+    
 `;
 
 export { FooterContainer }

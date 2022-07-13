@@ -9,7 +9,6 @@ export default function Search() {
         <main>
             <Header />
             <SearchDisplay />
-            
             <Footer />
         </main>
     );

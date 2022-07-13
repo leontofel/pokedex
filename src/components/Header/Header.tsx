@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
 
-    return(
+    return (
         <nav>
             <HeaderWrapper>
                 <Link to={'/'}>
                     <img src={logo} alt="Imagem do Logo" />
                 </Link>
-                    <h1>Poképedia</h1>
+                <h1>Poképedia</h1>
                 <SearchBar />
                 <ul>
                     <li>Login</li>

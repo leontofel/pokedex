@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { largeSize, mediumSize, primaryColor, secondaryColor, tertiaryColor } from "../../styles/variables";
+import { largeSize, secondaryColor, tertiaryColor } from "../../styles/variables";
 
 const CardWrapper = styled.div`
     margin: 1rem;
@@ -21,6 +21,30 @@ const CardWrapper = styled.div`
     }
     h3 {
         font-size: calc(${largeSize} - 7px);
+    }
+    @media only screen and (max-width: 425px){
+        max-width: 40vw;
+        max-height: 65vh;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 670px){
+        max-width: 60vw;
+        max-height: 65vh;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 1200px){
+        max-width: 40vw;
+        max-height: 65vh;
+        text-align: center;
+        img {
+            width: 100%;
+        }
     }
 `;
 

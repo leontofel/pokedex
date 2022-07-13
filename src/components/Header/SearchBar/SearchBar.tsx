@@ -7,7 +7,7 @@ import { SearchBarContainer } from "./stylesSearchBar";
 export default function SearchBar() {
 
     const [search, setSearch] = useRecoilState(currentSearch);
-   
+
     return (
         <form action="submit">
             <SearchBarContainer>

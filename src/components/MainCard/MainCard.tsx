@@ -14,17 +14,17 @@ export default function MainCard() {
     }
     const [pokemon, setPokemon] = useState(defaultPokemon);
     useEffect(() => {
-        axios(`https://pokeapi.co/api/v2/pokemon/clefairy/`)
-        .then(res => {
-            setPokemon(res.data);
-        });
+        axios(`https://pokeapi.co/api/v2/pokemon/blastoise/`)
+            .then(res => {
+                setPokemon(res.data);
+            });
     }, [])
-    
+
     return (
         <section>
             <MainCardContainer>
                 <h2> Pokemon Destaque do dia: </h2>
-                <Card id={pokemon.id} name={pokemon.name} base_experience={pokemon.base_experience} forms={pokemon.forms} location_area_encounters={pokemon.location_area_encounters}  />
+                <Card id={pokemon.id} name={pokemon.name} base_experience={pokemon.base_experience} forms={pokemon.forms} location_area_encounters={pokemon.location_area_encounters} />
             </MainCardContainer>
         </section>
     );

@@ -1,9 +1,11 @@
 import styled from "styled-components"
+import { largeSize } from "../../styles/variables";
 
-  const CarouselWrapper = styled.div`
+const CarouselWrapper = styled.div`
   width: 100vw;
   display: flex;
   position: relative;
+  margin-bottom: 2rem;
   &:hover {
     cursor: pointer;
   }
@@ -29,12 +31,18 @@ import styled from "styled-components"
   .left {
     left: 2%;
   }
-`
+`;
 const CarouselItem = styled.img`
   width: 100vw;
   height: 70vh;
   object-fit: contain;
   
-`
+`;
 
-export { CarouselItem, CarouselWrapper}
+const CarouselTitle = styled.div`
+  text-align: center;
+  font-size: ${largeSize};
+  margin-top: 15px;
+`;
+
+export { CarouselItem, CarouselWrapper, CarouselTitle }

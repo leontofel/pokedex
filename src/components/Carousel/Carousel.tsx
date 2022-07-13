@@ -1,26 +1,27 @@
 import { useEffect, useState } from "react";
-import { CarouselItem, CarouselWrapper } from "./stylesCarousel";
+import { CarouselItem, CarouselTitle, CarouselWrapper } from "./stylesCarousel";
 
 type CarouselProps = {
     slots: number,
-    images: string[]
+    images: string[],
+    title: string,
 }
 
-export default function Carousel({ slots, images }: CarouselProps) {
+export default function Carousel({ slots, images, title }: CarouselProps) {
 
     const [item, setItem] = useState(0)
 
-    useEffect(()=> {
-        if(item > (slots - 1)) setItem(0);
-        if(item < 0) setItem(3); 
+    useEffect(() => {
+        if (item > (slots - 1)) setItem(0);
+        if (item < 0) setItem(3);
     }, [item, slots, setItem])
 
 
-    function handleCarouselClick(side: string){
+    function handleCarouselClick(side: string) {
         side === "right" ? setItem(item + 1) : setItem(item - 1);
         return;
     }
-    
+
     function carouselTimer() {
         setInterval(() => {
             handleCarouselClick("right");
@@ -29,6 +30,7 @@ export default function Carousel({ slots, images }: CarouselProps) {
 
     return (
         <section>
+            <CarouselTitle><h2>{title}</h2></CarouselTitle>
             <CarouselWrapper>
                 <button className="left" onClick={() => handleCarouselClick("left")}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-compact-left" viewBox="0 0 16 16">
